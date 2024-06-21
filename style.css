@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('https://www.thomascook.in/blog/wp-content/uploads/2018/04/foreign-exchange.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    min-height: 50vh;
+    width: 45vh;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    color: #4a4a4a;
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+
+form {
+    margin: 2.5rem 0 1.5rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+.amount p, .from p, .to p {
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+form select,
+button,
+input {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 0.75rem;
+    transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+form input {
+    border: 1px solid #d3d3d3;
+    font-size: 1.2rem;
+    height: 3.5rem;
+    padding-left: 0.75rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s;
+}
+
+form input:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-color: #4a90e2;
+}
+
+.dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+
+.dropdown i {
+    font-size: 2rem;
+    color: #4a90e2;
+    margin: 0 1rem;
+    transition: color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.dropdown i:hover {
+    color: #357abd;
+    transform: rotate(180deg);
+}
+
+.select-container img {
+    max-width: 2.5rem;
+    margin-right: 0.5rem;
+}
+
+.select-container {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid #d3d3d3;
+    background: #f7f7f7;
+}
+
+.select-container select {
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    width: auto;
+    margin-left: 0.5rem;
+}
+
+.msg {
+    margin: 2.5rem 0 2.5rem 0;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+form button {
+    height: 3.5rem;
+    background-color: #4a90e2;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.75rem;
+    transition: background-color 0.3s, transform 0.3s;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+form button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s;
+    z-index: 0;
+}
+
+form button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+form button:hover {
+    background-color: #357abd;
+    transform: scale(1.05);
+}
+
+form button:active {
+    transform: scale(1);
+}
